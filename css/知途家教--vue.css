@@ -1,0 +1,125 @@
+html,body,ul,li{
+	padding:0;
+	margin:0;
+	overflow-x:hidden;
+}
+html,body {
+    font-size: 62.5%;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+.top{
+	height:2rem;
+	line-height: 2rem;
+}
+.top a{
+	color:black;
+	float:right;
+	padding-right: 2rem;
+}
+.pic{
+	height: 9rem;
+	width: 100%;
+}
+.swiper-container{
+	height:9rem;
+	position: relative;
+	overflow: hidden;
+}
+.swiper-wrapper .swiper-slide img{
+	width:100%;
+	height:9rem;
+}
+#app img{
+	width:100%;
+}
+.subject{
+	width:100%;
+	height:9rem;
+	margin-left:9rem;
+	overflow-y:hidden;
+	overflow-x:hidden; 
+}
+.subject ul{
+	width:200%;
+	margin-top: 1rem;
+}
+#app .subject ul li img{
+	width:4rem; 
+}
+.subject ul li p{
+	margin-left: 10px;
+	color:black;
+}
+.subject ul li{
+	float:left;
+	width:10%;
+}
+.hot{
+	height:3rem;
+	line-height: 3rem;
+	background-color:#f1f1f1;
+	margin-top: 2rem;
+}
+.hot>a{
+	color:orange;
+	font-size: 1.5rem;
+	font-weight: 1000;
+}
+.teacher{
+	height:10rem;
+	line-height:10rem;
+}
+.teacher a{
+	color:black;
+}
+#app .teacher img{
+	width:9rem;
+	height:9rem;
+	margin-top: 1rem;
+}
+.teacher span{
+	position: relative;
+	top:-7rem;
+	margin:0 0.3rem;
+}
+.teacher span.chen{
+	font-size: 1.5rem;
+}
+.teacher span.math{
+	background-color: green;
+	color:#fff;
+	padding:0 0.5rem;
+	font-size: 1.2rem
+}
+.teacher span.level{
+	border:1px solid green;
+	border-radius: 5px;
+}
+.teacher span.time{
+	float:right;
+	position: relative;
+    top: -4rem;
+}
+.teacher p{
+	position: relative;
+    top: -16rem;
+    left: 9.5rem;
+}
+.introduced{
+	position: relative;
+	top:-12rem;
+	left:9.5rem;
+}
+#app .introduced img{
+	width:1.5rem;
+	height:1.5rem;
+}
+.introduced span{
+	position:relative;
+	top:-0.3rem;
+}

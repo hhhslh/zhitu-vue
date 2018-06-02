@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title></title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/subject.css">
+    </head>
+    <body>
+        <div id="app">
+        		<ul class="search-bar">
+	        		<li  @click="clickGrade" :class="isShowGrade ? 'selected' : ''">{{ grade }}
+                        <i></i>
+                    </li>
+	        		<li @click="clickSubject" :class="isShowSubject ? 'selected' : ''">{{ subject }}
+                        <i></i>
+                    </li>  
+	        		<li @click="clickType" :class="isShowType ? 'selected' : ''">{{ teacherType }}
+                        <i></i>
+                    </li>
+	        	</ul>
+	        	<div v-if="condition" :class="isShowAllSelect ? 'show' : 'hide'">
+	        	    
+                    
+                        <div :class="isShowGrade ? 'show' : 'hide'" class="box">
+    	        			<span class="search-item" v-for="item in condition.grade" :class="item.isSelected ? 'selected' : ''" @click="clickItem(item)">{{ item.label }}</span>
+                        </div>
+                        <div class="tips"></div>
+	        	    
+                        <div :class="isShowSubject ? 'show' : 'hide'" class="box">
+    	        			<span class="search-item" v-for="item in condition.subject" :class="item.isSelected ? 'selected' : ''" @click="clickItem(item)">{{ item.label }}</span>
+                        </div>
+                        <div class="tips"></div>
+                                    
+    	        		<div :class="isShowType ? 'show' : 'hide'" class="box">
+    	        			<span class="search-item" v-for="item in condition.type" :class="item.isSelected ? 'selected' : ''" @click="clickItem(item)">{{ item.label }}</span>
+                        </div>
+                        <div class="tips"></div>
+	        		
+	        	</div>
+
+
+            <div class="teacher"  v-for="item in list">
+                <a v-bind:href="'./教师详情.html?id='+item.id">
+                    <img :src="item.image">
+                    <span class="chen">{{ item.name }}</span>
+                    <span class="math">{{ item.subject[0].label }}</span> 
+                    <span class="level">{{ item.grade[0].label }}</span>
+                    <span class="time">已售200课时</span>
+                    <p>{{ item.teach_year }}年教龄</p>
+                    <div class="introduced">
+                        <img src=".//image/yuan.png">
+                        <span>{{ item.type[0].label }}</span>
+                        <img src=".//image/yuan.png">
+                        <span>已认证</span>
+                        <img src=".//image/yuan.png">
+                        <span>{{ item.type[0].label }}</span>
+                    </div> 
+                </a>
+            </div>
+
+        </div>
+        
+        
+
+        <script type="text/javascript" src="./js/subject.js"></script>
+    </body>
+</html>
